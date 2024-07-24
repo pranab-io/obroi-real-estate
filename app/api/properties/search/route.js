@@ -8,10 +8,8 @@ export const GET = async (request) => {
     const { searchParams } = new URL(request.url);
     const location = searchParams.get('location');
     const propertyType = searchParams.get('propertyType');
-    // console.log(location, propertyType);
 
     const locationPattern = new RegExp(location, 'i');
-    // console.log(locationPattern);
 
     // Match location pattern against database fields
     let query = {
@@ -32,7 +30,6 @@ export const GET = async (request) => {
     }
 
     const properties = await Property.find(query);
-    // console.log(properties);
 
     return new Response(JSON.stringify(properties), {
       status: 200,

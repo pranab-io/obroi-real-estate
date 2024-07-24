@@ -3,6 +3,7 @@ import FeaturedPropertyCard from './FeaturedPropertyCard';
 
 const FeaturedProperties = async () => {
   const properties = await fetchProperties({ showFeatured: true });
+
   return (
     properties.length > 0 && (
       <section className="bg-pink-50 px-4 pt-6 pb-10">

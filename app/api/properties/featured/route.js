@@ -1,8 +1,6 @@
 import connectDB from '@/config/database';
 import Property from '@/models/Property';
 
-export const dynamic = 'no-store';
-
 // GET /api/properties/featured
 export const GET = async (request) => {
   try {
