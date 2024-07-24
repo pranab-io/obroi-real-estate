@@ -5,7 +5,7 @@ async function fetchProperties({ showFeatured = false } = {}) {
   try {
     // Handle the case where the domain is not available yet
     if (!apiDomain) {
-      return [];
+      return { total: 0, properties: [] };
     }
 
     const res = await fetch(
